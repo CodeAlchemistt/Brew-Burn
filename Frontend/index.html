@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BREW & BURN</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Gabriela&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body>
+    <header>
+        <div class="logo-box text-center">
+            <h1 class="logo-title">Brew & Burn</h1>
+            <small class="logo-sub">Brewing comfort , Baking connection</small>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-lg-none" href="#">BREW & BURN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto navbar-links">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="coffee.html">Our Coffee</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bakery.html">Our Bakery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="account.html" class="icon-link" aria-label="My Account"><i class="fas fa-user"></i></a>
+                    <a href="cart.html" class="icon-link position-relative" aria-label="View Shopping Cart">
+                        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="cart-badge">0</span>
+                    </a>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active"
+                    style="background-image: url('http://127.0.0.1:8000/static/Image/hero1.jpg');">
+                    <div class="carousel-caption">
+                        <h1>Brewed bold. Served warm.</h1>
+                        <p>Find your calm in every cup.</p>
+                        <a href="coffee.html" class="btn btn-main">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item"
+                    style="background-image: url('http://127.0.0.1:8000/static/Image/hero2.jpg');">
+                    <div class="carousel-caption">
+                        <h1>From oven to heart.</h1>
+                        <p>Crafted to delight. Baked to perfection.</p>
+                        <a href="bakery.html" class="btn btn-main">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item"
+                    style="background-image: url('http://127.0.0.1:8000/static/Image/hero3.jpg');">
+                    <div class="carousel-caption">
+                        <h1>Join Us Today</h1>
+                        <p>Be a part of our growing community.</p>
+                        <a href="contact.html" class="btn btn-main">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="services-section bg-beige py-3">
+        <div class="container">
+            <div class="row text-center g-3">
+                <div class="col-md-3 col-6">
+                    <div class="service-box shadow-sm rounded py-3">
+                        <i class="fa fa-globe fa-2x mb-2 text-brown"></i>
+                        <div class="mt-1">FREE SHIPPING IN INDIA</div>
+                        <small>On order over ₹2000</small>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="service-box shadow-sm rounded py-3">
+                        <i class="fa fa-money-bill-wave fa-2x mb-2 text-brown"></i>
+                        <div class="mt-1">CASH ON DELIVERY</div>
+                        <small>100% money back guarantee</small>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="service-box shadow-sm rounded py-3">
+                        <i class="fa fa-gift fa-2x mb-2 text-brown"></i>
+                        <div class="mt-1">SPECIAL GIFT CARD</div>
+                        <small>Offer special bonuses with gift</small>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="service-box shadow-sm rounded py-3">
+                        <i class="fa fa-headset fa-2x mb-2 text-brown"></i>
+                        <div class="mt-1">24/7 CUSTOMER SERVICE</div>
+                        <small>Call: +91-776-XXXX-618</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-section py-5 bg-light">
+        <div class="container">
+            <h3 class="section-title">Top Categories</h3>
+            <hr class="w-50 mx-auto mb-5">
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="category-card rounded shadow-sm p-3 bg-white">
+                        <img src="http://127.0.0.1:8000/static/Image/Cupcakes.jpg" alt="Cupcakes"
+                            class="img-fluid rounded mb-2" style="height:140px; object-fit:cover;" />
+                        <div class="fs-5 fw-semibold">Cupcakes</div>
+                        <a href="bakery.html#section-title" class="btn btn-outline-black btn-sm mt-2">View More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card rounded shadow-sm p-3 bg-white">
+                        <img src="http://127.0.0.1:8000/static/Image/Coffees.jpg" alt="Coffees"
+                            class="img-fluid rounded mb-2" style="height:140px; object-fit:cover;" />
+                        <div class="fs-5 fw-semibold">Coffees</div>
+                        <a href="coffee.html#section-title" class="btn btn-outline-black btn-sm mt-2">View More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card rounded shadow-sm p-3 bg-white">
+                        <img src="http://127.0.0.1:8000/static/Image/Cookies and cakes.jpg" alt="Cookies & Cakes"
+                            class="img-fluid rounded mb-2" style="height:140px; object-fit:cover;" />
+                        <div class="fs-5 fw-semibold">Cookies & Cakes</div>
+                        <a href="bakery.html#section-title" class="btn btn-outline-brown btn-sm mt-2">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section py-5">
+        <div class="container">
+            <h3 class="section-title">Top Products</h3>
+            <hr class="w-50 mx-auto mb-5">
+            <div class="d-flex justify-content-center mb-3 gap-2">
+                <span class="badge text-bg-light text-black px-3 py-2">Featured</span>
+                <span class="badge text-bg-light text-black px-3 py-2">Latest</span>
+                <span class="badge text-bg-light text-black px-3 py-2">Bestseller</span>
+            </div>
+            <div class="row g-4 text-center">
+
+                <div class="col-md-3">
+                    <div class="product-card bg-white p-3 rounded shadow-sm h-100">
+                        <img src="http://127.0.0.1:8000/static/Image/Irish-coffee.jpg" alt="Irish Coffee"
+                            class="img-fluid rounded mb-2" style="height:180px; object-fit:cover;" />
+                        <h5 class="fw-medium mt-2">Irish Coffee
+                            <div class="star-rating text-warning my-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="fs-5 fw-bold">₹ 349.00 </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="product-card bg-white p-3 rounded shadow-sm h-100">
+                        <img src="http://127.0.0.1:8000/static/Image/Blueberry Muffin.jpg" alt="Blueberry Muffin"
+                            class="img-fluid rounded mb-2" style="height:180px; object-fit:cover;" />
+                        <h5 class="fw-medium mt-2">Blueberry Muffin
+                            <div class="star-rating text-warning my-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="fs-5 fw-bold">₹ 297.00</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="product-card bg-white p-3 rounded shadow-sm h-100">
+                        <img src="http://127.0.0.1:8000/static/Image/Choco-Chip Cold Brew Shake.jpg"
+                            alt="Choco-Chip Cold Brew Shake" class="img-fluid rounded mb-2"
+                            style="height:200px; object-fit:cover;" />
+                        <h5 class="fw-medium mt-2">Choco-Chip Cold Brew Shake
+                            <div class="star-rating text-warning my-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="fs-5 fw-bold">₹ 189.00</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="product-card bg-white p-3 rounded shadow-sm h-100">
+                        <img src="http://127.0.0.1:8000/static/Image/Black Forest Gateau.jpg" alt="Black Forest Gateau"
+                            class="img-fluid rounded mb-2" style="height:200px; object-fit:cover;" />
+                        <h5 class="fw-medium mt-2">Black Forest Gateau
+                            <div class="star-rating text-warning my-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="fs-5 fw-bold">₹ 995.20</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-images-section py-5 bg-light">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <img src="http://127.0.0.1:8000/static/Image/coffee gallery image 1.jpg"
+                        class="img-fluid rounded shadow-sm" alt=""
+                        style="height:350px; width:100%; object-fit:cover;" />
+                </div>
+                <div class=" col-md-6">
+                    <img src="http://127.0.0.1:8000/static/Image/coffee gallery image 2.avif"
+                        class="img-fluid rounded shadow-sm" alt=""
+                        style="height:750px; width:100%; object-fit:cover;" />
+                </div>
+                <div class="col-md-3">
+                    <img src="http://127.0.0.1:8000/static/Image/coffee gallery image 3.jpg"
+                        class="img-fluid rounded shadow-sm" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="special-products-section py-5">
+        <div class="container">
+            <h3 class="section-title">Special Products</h3>
+            <hr class="w-50 mx-auto mb-5">
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="product-card bg-white p-3 rounded shadow-sm position-relative">
+                        <span class="badge bg-warning position-absolute top-0 end-0 m-2">-10%</span>
+                        <img src="http://127.0.0.1:8000/static/Image/Espresso Mocha Cupcake.jpg"
+                            alt="Espresso Mocha Cupcake" class="img-fluid rounded mb-2"
+                            style="height:140px; width:100%; object-fit:cover;" />
+                        <div class="fw-medium mt-2">Espresso Mocha Cupcake</div>
+                        <div class="star-rating text-warning my-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="fs-5 fw-bold">₹ 1,411.00 <span
+                                class="text-decoration-line-through fs-6 fw-normal text-secondary">₹ 1569.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-card bg-white p-3 rounded shadow-sm position-relative">
+                        <span class="badge bg-warning position-absolute top-0 end-0 m-2">-30%</span>
+                        <img src="http://127.0.0.1:8000/static/Image/Eclairs.jpg" alt="Eclairs"
+                            class="img-fluid rounded mb-2" style="height: 140px; width:100%; object-fit:cover;" />
+                        <div class="fw-medium mt-2">Eclairs</div>
+                        <div class="star-rating text-warning my-1">
+                            <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <div class="fs-5 fw-bold"> ₹ 115.00 <span
+                                class="text-decoration-line-through fs-6 fw-normal text-secondary"> ₹ 150.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-card bg-white p-3 rounded shadow-sm position-relative">
+                        <span class="badge bg-warning position-absolute top-0 end-0 m-2">-11%</span>
+                        <img src="http://127.0.0.1:8000/static/Image/English coffee.jpg" alt="English Coffee"
+                            class="img-fluid rounded mb-2" style="height:140px; width:100%; object-fit:cover;" />
+                        <div class="fw-medium mt-2">English Coffee</div>
+                        <div class="star-rating text-warning my-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <div class="fs-5 fw-bold">₹ 346.00<span
+                                class="text-decoration-line-through fs-6 fw-normal text-secondary">₹ 389.00</span></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-card bg-white p-3 rounded shadow-sm position-relative">
+                        <span class="badge bg-warning position-absolute top-0 end-0 m-2">-20%</span>
+                        <img src="http://127.0.0.1:8000/static/Image/Hot Chocolate.jpg" alt="Hot Chocolate"
+                            class="img-fluid rounded mb-2" style="height:140px; width:100%; object-fit:cover;" />
+                        <div class="fw-medium mt-2">Hazelnut Hot Chocolate</div>
+                        <div class="star-rating text-warning my-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <div class="fs-5 fw-bold">₹ 224.00<span
+                                class="text-decoration-line-through fs-6 fw-normal text-secondary">₹ 279.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section py-5">
+        <div class="container">
+            <h2 class="section-title">What Our Friends Say</h2>
+            <hr class="w-50 mx-auto mb-5">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-slider">
+                            <p class="testimonial-quote">"The best coffee in town, hands down. The atmosphere is so
+                                cozy and welcoming. It's my daily escape!"</p>
+                            <p class="testimonial-author">- Priya S.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-slider">
+                            <p class="testimonial-quote">"Their Red Velvet Cake is to die for! I order it for every
+                                special occasion. The quality is always outstanding."</p>
+                            <p class="testimonial-author">- Arjun M.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-title">
+        <div class="container">
+            <h2 class="section-title">From Our Blog</h2>
+            <hr class="w-50 mx-auto mb-5">
+            <div class="row g-4">
+                <article class="col-md-4">
+                    <div class="standard-card blog-card p-3">
+                        <img src="http://127.0.0.1:8000/static/Image/coffee-beans-spilling-out-burlap-sack-387568830.webp"
+                            alt="Coffee beans spilling from a burlap sack." class="img-fluid rounded mb-3" width="400"
+                            height="200" loading="lazy" />
+                        <h3 class="fw-semibold">The Journey of the Bean</h3>
+                        <div class="text-muted small mb-2">September 08, 2025</div>
+                        <p class="small">Ever wonder about the story behind your morning espresso? It's a
+                            fascinating tale...</p>
+                        <a href="blog.html" class="btn btn-main">Read More</a>
+                    </div>
+                </article>
+                <article class="col-md-4">
+                    <div class="standard-card blog-card p-3">
+                        <img src="http://127.0.0.1:8000/static/Image/A freshly baked loaf of sourdough bread.jpg"
+                            alt="A freshly baked loaf of sourdough bread." class="img-fluid rounded mb-3" width="400"
+                            height="200" loading="lazy" />
+                        <h3 class="fw-semibold">Mastering Sourdough</h3>
+                        <div class="text-muted small mb-2">August 31, 2025</div>
+                        <p class="small">The heart of our bakery isn't an oven—it's our beloved sourdough starter...
+                        </p>
+                        <a href="blog.html" class="btn btn-main">Read More</a>
+                    </div>
+                </article>
+                <article class="col-md-4">
+                    <div class="standard-card blog-card p-3">
+                        <img src="http://127.0.0.1:8000/static/Image/A cozy, autumn-themed coffee drink.jpg"
+                            alt="A cozy, autumn-themed coffee drink." class="img-fluid rounded mb-3" width="400"
+                            height="200" loading="lazy" />
+                        <h3 class="fw-semibold">Seasonal Autumn Sips</h3>
+                        <div class="text-muted small mb-2">August 25, 2025</div>
+                        <p class="small">As the leaves begin to turn, so does our menu. Discover our new
+                            autumn-inspired drinks...</p>
+                        <a href="blog.html" class="btn btn-main">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-light pt-4 pb-2 text-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <ul class="list-unstyled small">
+                        <li>Station Road,Jugsalai ,Jamshedpur-831002.</li>
+                        <li>Phone: +91-776-XXXX-618</li>
+                        <li>Fax: 0124-345-678</li>
+                        <li>Email: thecafe@support.com</li>
+                    </ul>
+                    <div>
+                        <a href="https://www.facebook.com/rrahul.yadav.5621" class="me-2 text-dark"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2 text-dark"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/hum_rahul.ydv/" class="me-2 text-dark"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://in.pinterest.com/rahulyadavanshi412/" class="text-dark"><i
+                                class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Information</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="about.html" class="text-dark text-decoration-none">About Us</a></li>
+                        <li><a href="delivery.html" class="text-dark text-decoration-none">Delivery Information</a></li>
+                        <li><a href="privacy_policy.html" class="text-dark text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="T&C.html" class="text-dark text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="contact.html" class="text-dark text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">My Account</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="account.html" class="text-dark text-decoration-none">My Account</a></li>
+                        <li><a href="order_history.html" class="text-dark text-decoration-none">Order History</a></li>
+                        <li><a href="returns.html" class="text-dark text-decoration-none">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Enter e-mail here..." />
+                        <button class="btn btn-brown btn-sm w-100" type="submit">Subscribe</button>
+                    </form>
+                    <small>Subscribe to our newsletter now and stay up to date with new collections and exclusive
+                        offers.</small>
+                </div>
+            </div>
+            <hr />
+            <div class="text-center small">
+                <span>BREW & BURN All Right Reserves © 2025</span>
+                <div class="mt-2">
+                    <img src="https://img.icons8.com/color/32/000000/visa.png" alt="Visa" />
+                    <img src="https://img.icons8.com/color/32/000000/mastercard.png" alt="Mastercard" />
+                    <img src="https://img.icons8.com/color/32/000000/paypal.png" alt="Paypal" />
+                    <img src="https://img.icons8.com/color/32/000000/discover.png" alt="Discover" />
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

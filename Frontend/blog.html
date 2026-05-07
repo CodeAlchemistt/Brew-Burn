@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brew & Burn | Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Gabriela&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo-box text-center">
+            <h1 class="logo-title">Brew & Burn</h1>
+            <small class="logo-sub">Brewing comfort, Baking connection</small>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-lg-none" href="#">BREW & BURN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto navbar-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="coffee.html">Our Coffee</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bakery.html">Our Bakery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="account.html" class="icon-link" aria-label="My Account"><i class="fas fa-user"></i></a>
+                    <a href="cart.html" class="icon-link position-relative" aria-label="View Shopping Cart">
+                        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="blog-section">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">From Our Blog</h2>
+                <ul class="blog-list">
+                    <li class="blog-item">
+                        <img src="http://127.0.0.1:8000/static/Image/coffee-beans-spilling-out-burlap-sack-387568830.webp"
+                            alt="Coffee beans spilling out of a burlap sack." class="img-fluid rounded mb-3" />
+                        <h3>The Journey of the Bean: From Farm to Cup</h3>
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar-alt"></i> September 08, 2025</span>
+                        </div>
+                        <p class="blog-excerpt">
+                            Ever wonder about the story behind your morning espresso? The journey of a coffee bean is a
+                            fascinating tale of geography, climate, and meticulous care that begins long before it
+                            reaches our roaster...
+                        </p>
+                        <div class="blog-full-content" id="blogContent1">
+                            <p>Our beans are sourced from sustainable farms in Ethiopia, Colombia, and Guatemala. Each
+                                region imparts unique flavor characteristics to the beans, influenced by altitude, soil
+                                composition, and processing methods.</p>
+                            <p>After harvesting, the beans undergo a meticulous process of drying, milling, and roasting
+                                to develop their distinctive flavors. Our master roasters carefully monitor temperature
+                                and time to ensure each batch reaches its full potential.</p>
+                            <p>The final step is the brewing process, where our baristas use precise measurements and
+                                techniques to extract the perfect cup of coffee, ensuring you experience the full
+                                journey in every sip.</p>
+                        </div>
+                        <a class="blog-read-more" data-bs-toggle="collapse" href="#blogContent1" role="button"
+                            aria-expanded="false" aria-controls="blogContent1">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+
+                    <li class="blog-item">
+                        <img src="http://127.0.0.1:8000/static/Image/A freshly baked loaf of sourdough bread.jpg"
+                            alt="A freshly baked loaf of sourdough bread on a wooden board."
+                            class="img-fluid rounded mb-3" />
+                        <h3>Mastering the Art of Sourdough: A Baker's Diary</h3>
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar-alt"></i> August 31, 2025</span>
+                        </div>
+                        <p class="blog-excerpt">
+                            The heart of our bakery isn't an oven—it's "Doughloris," our beloved sourdough starter. This
+                            living culture of wild yeast and bacteria is what gives our bread its signature tang and
+                            airy crumb. It's a testament to traditional baking...
+                        </p>
+                        <div class="blog-full-content" id="blogContent2">
+                            <p>Doughloris has been with us for over seven years, nurtured with daily feedings of organic
+                                flour and filtered water. This long fermentation process develops complex flavors that
+                                commercial yeast simply can't replicate.</p>
+                            <p>Our sourdough process involves a slow, cold fermentation that can take up to 36 hours.
+                                This extended proving time allows the gluten to break down, making the bread easier to
+                                digest and developing its characteristic tangy flavor.</p>
+                            <p>We shape each loaf by hand and bake them in our stone hearth oven, which gives our bread
+                                its crisp, crackly crust and soft, airy interior. The result is a loaf that's perfect
+                                for everything from avocado toast to your favorite sandwich.</p>
+                        </div>
+                        <a class="blog-read-more" data-bs-toggle="collapse" href="#blogContent2" role="button"
+                            aria-expanded="false" aria-controls="blogContent2">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+
+                    <li class="blog-item">
+                        <img src="http://127.0.0.1:8000/static/Image/A cozy, autumn-themed coffee drink.jpg"
+                            alt="A warm and cozy autumn-themed coffee drink." class="img-fluid rounded mb-3" />
+                        <h3>Seasonal Sips: Welcoming Our Autumn Menu</h3>
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar-alt"></i> August 25, 2025</span>
+                        </div>
+                        <p class="blog-excerpt">
+                            As the leaves begin to turn, so does our menu. We're thrilled to introduce our new
+                            collection of autumn-inspired drinks and treats, crafted to bring you the cozy flavors of
+                            the season. Come celebrate the change of seasons with us...
+                        </p>
+                        <div class="blog-full-content" id="blogContent3">
+                            <p>Our autumn menu features a variety of seasonal favorites, including Pumpkin Spice Latte
+                                made with real pumpkin puree and our special spice blend, Apple Crisp Macchiato with
+                                caramelized apple flavors, and Maple Pecan Latte featuring Vermont maple syrup.</p>
+                            <p>For our bakery selection, we're introducing spiced pear scones, pumpkin whoopie pies, and
+                                apple cinnamon rolls. Each item is made with seasonal ingredients sourced from local
+                                farms whenever possible.</p>
+                            <p>We've also created a special fall pairing menu that matches our seasonal drinks with
+                                complementary pastries. Ask our baristas for their recommendations to create the perfect
+                                autumn flavor experience.</p>
+                        </div>
+                        <a class="blog-read-more" data-bs-toggle="collapse" href="#blogContent3" role="button"
+                            aria-expanded="false" aria-controls="blogContent3">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-light pt-4 pb-2 text-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <ul class="list-unstyled small">
+                        <li>Station Road,Jugsalai ,Jamshedpur-831002.</li>
+                        <li>Phone: +91-776-XXXX-618</li>
+                        <li>Fax: 0124-345-678</li>
+                        <li>Email: thecafe@support.com</li>
+                    </ul>
+                    <div>
+                        <a href="https://www.facebook.com/rrahul.yadav.5621" class="me-2 text-dark"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/hum_rahul.ydv/" class="me-2 text-dark"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://in.pinterest.com/rahulyadavanshi412/" class="text-dark"><i
+                                class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Information</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="about.html" class="text-dark text-decoration-none">About Us</a></li>
+                        <li><a href="delivery.html" class="text-dark text-decoration-none">Delivery Information</a></li>
+                        <li><a href="privacy_policy.html" class="text-dark text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="T&C.html" class="text-dark text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="contact.html" class="text-dark text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">My Account</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="account.html" class="text-dark text-decoration-none">My Account</a></li>
+                        <li><a href="order_history.html" class="text-dark text-decoration-none">Order History</a></li>
+                        <li><a href="returns.html" class="text-dark text-decoration-none">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Enter e-mail here..." />
+                        <button class="btn btn-brown btn-sm w-100" type="submit">Subscribe</button>
+                    </form>
+                    <small>Subscribe to our newsletter now and stay up to date with new collections and exclusive
+                        offers.</small>
+                </div>
+            </div>
+            <hr />
+            <div class="text-center small">
+                <span>BREW & BURN All Right Reserves © 2025</span>
+                <div class="mt-2">
+                    <img src="https://img.icons8.com/color/32/000000/visa.png" alt="Visa" />
+                    <img src="https://img.icons8.com/color/32/000000/mastercard.png" alt="Mastercard" />
+                    <img src="https://img.icons8.com/color/32/000000/paypal.png" alt="Paypal" />
+                    <img src="https://img.icons8.com/color/32/000000/discover.png" alt="Discover" />
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

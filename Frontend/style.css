@@ -1,0 +1,1547 @@
+/* ── Design Tokens ──────────────────────────────────────── */
+:root {
+    --header-height: 90px;
+    --navbar-height: 62px;
+    --color-burgundy:   #582534;
+    --color-rose:       #C9A69B;
+    --color-gold:       #C2B280;
+    --color-terracotta: #8b4833;
+    --color-ivory:      #FDF6EC;
+    --color-smoke:      #6E6658;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-ivory);
+    font-family: 'Gabriela', 'Georgia', serif;
+    color: var(--color-smoke);
+    letter-spacing: 0.03em;
+    overflow-x: hidden;
+    padding-top: calc(var(--header-height) + var(--navbar-height));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header - Sticky, exact height, no gap */
+.logo-box {
+    height: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1.5px solid var(--color-gold);
+    padding: 0;
+    background: var(--color-ivory);
+    box-shadow: 0 2px 8px rgba(88, 37, 52, 0.07);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.navbar,
+.navbar.navbar-light,
+.navbar.bg-beige {
+    position: fixed;
+    top: var(--header-height) !important;
+    width: 100%;
+    height: var(--navbar-height);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    background: var(--color-burgundy) !important;
+    border-bottom: 2px solid rgba(194, 178, 128, 0.25);
+    z-index: 1000;
+}
+
+.navbar .navbar-toggler {
+    border-color: rgba(253, 246, 236, 0.5);
+}
+.navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28253,246,236,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar-links li a {
+    color: #FDF6EC;
+    /* Warm Ivory for contrast */
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    background: rgba(201, 166, 155, 0.2);
+    /* Dusty Rose */
+    color: #C9A69B;
+    /* Dusty Rose */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-links li a.active {
+    background: rgba(201, 166, 155, 0.2);
+    /* Dusty Rose */
+    color: #C9A69B;
+    /* Dusty Rose */
+}
+
+/* Search Form */
+form[role="search"] .form-control {
+    background: rgba(253, 246, 236, 0.2);
+    /* Warm Ivory */
+    color: #FDF6EC;
+    /* Warm Ivory for contrast */
+    border: none;
+    padding: 8px 12px;
+}
+
+form[role="search"] .form-control::placeholder {
+    color: #FDF6EC;
+    /* Warm Ivory for contrast */
+}
+
+form[role="search"] .btn {
+    background: rgba(201, 166, 155, 0.3);
+    /* Dusty Rose */
+    color: #FDF6EC;
+    /* Warm Ivory */
+    border: none;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+}
+
+form[role="search"] .btn:hover {
+    background: rgba(201, 166, 155, 0.5);
+    /* Dusty Rose */
+    color: #FDF6EC;
+    /* Warm Ivory */
+}
+
+/* Logo */
+.logo-title {
+    font-family: 'Fleur De Leah', cursive;
+    font-size: 3.65rem;
+    font-weight: bold;
+    color: #582534;
+    /* Burgundy Roast */
+    margin: 0;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 4px 7px #C2B280;
+    /* Gold Leaf */
+    transition: color 0.4s, text-shadow 0.4s;
+}
+
+.logo-title:hover {
+    color: #C9A69B;
+    /* Dusty Rose */
+}
+
+.logo-sub {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #582534;
+    /* Burgundy Roast */
+    margin-top: -8px;
+}
+
+/* Top Icons - Increased gap between login and cart */
+.top-icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* Increased gap between icons */
+}
+
+.icon-link {
+    font-size: 1.18rem;
+    color: #FDF6EC;
+    /* Warm Ivory - UPDATED for visibility */
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.22s;
+}
+
+.icon-link:hover {
+    color: #C9A69B;
+    /* Dusty Rose */
+    transform: scale(1.09) rotate(-3deg);
+}
+
+.cart-badge {
+    background: #C9A69B;
+    /* Dusty Rose */
+    color: #FDF6EC;
+    /* Warm Ivory */
+    font-size: 0.70rem;
+    padding: 3px 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -12px;
+}
+
+/* Hero carousel - full height only inside .hero section */
+.hero .carousel-item {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 16px;
+    /* removed margin-top — body padding-top already handles the offset */
+}
+
+/* Testimonial carousel items - height fits content, no overlay */
+.testimonial-section .carousel-item {
+    height: auto;
+    background: none;
+}
+
+/* Generic .carousel-item base (no fixed height) */
+.carousel-item {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(88, 37, 52, 0.44);
+    border-radius: 16px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FDF6EC;
+    /* Warm Ivory */
+    z-index: 2;
+    font-family: 'Gabriela', serif;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 14px #582534;
+    /* Burgundy Roast */
+}
+
+/* Glass morphism effect for carousel captions */
+.carousel-caption {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+.carousel-caption h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #582534;
+    /* Changed to Burgundy Roast for better contrast */
+    margin-bottom: 15px;
+}
+
+.carousel-caption p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.35rem;
+    margin: 18px 0 22px;
+    color: #582534;
+    /* Changed to Burgundy Roast for better contrast */
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Services */
+.mt-1 {
+    margin-top: .25rem !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #6E6658;
+    /* Olive Smoke */
+}
+
+.small,
+small {
+    font-size: .875em;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Cards Hover */
+.category-card,
+.product-card,
+.blog-card {
+    transition: box-shadow 0.28s, transform 0.24s;
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+}
+
+.category-card:hover,
+.product-card:hover,
+.blog-card:hover {
+    box-shadow: 0 6px 24px rgba(88, 37, 52, 0.15);
+    /* Burgundy Roast */
+    transform: translateY(-4px) scale(1.015);
+}
+
+/* Buttons */
+.btn-main,
+.btn-brown,
+.btn-outline-brown,
+.btn-outline-black {
+    background: #8b4833;
+    /* Dusty Rose */
+    font-family: 'Montserrat', sans-serif;
+    color: #FDF6EC;
+    /* Warm Ivory */
+    border: none;
+    padding: 13px 30px;
+    border-radius: 26px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.btn-main:hover,
+.btn-brown:hover,
+.btn-outline-brown:hover,
+.btn-outline-black:hover {
+    background: #582534;
+    /* Burgundy Roast */
+    color: #FDF6EC;
+    /* Warm Ivory */
+    box-shadow: 0 6px 24px rgba(201, 166, 155, 0.4);
+    /* Dusty Rose */
+    transform: translateY(-3px) scale(1.03);
+}
+
+/* Testimonials */
+.testimonial-section {
+    background-color: var(--color-ivory);
+    font-family: 'Gabriela', serif;
+    padding: 3rem 0;
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem 3rem;
+    text-align: center;
+    color: var(--color-smoke);
+    background-color: var(--color-rose);
+    border-radius: 16px;
+    /* No fixed/min height — shrinks to content */
+}
+
+.testimonial-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: var(--color-burgundy);
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: var(--color-burgundy);
+    margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+    background: #6E6658;
+    /* Olive Smoke */
+    color: #C2B280;
+    /* Gold Leaf */
+    border-top: 2px solid #C9A69B;
+    /* Dusty Rose */
+    font-family: 'Gabriela', serif;
+    letter-spacing: 0.04em;
+    font-size: 1em;
+}
+
+.footer a {
+    color: #FDF6EC;
+    /* Warm Ivory */
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #C9A69B !important;
+    /* Dusty Rose */
+}
+
+/* Updated Item Cards with Price/Name Below Image */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align content to the top */
+    align-items: center;
+    padding: 0;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Front Side - Image with visible text card below */
+.card-front {
+    background-color: #FDF6EC;
+    /* Warm Ivory background */
+}
+
+.card-image {
+    width: 100%;
+    height: 70%;
+    /* Image takes 70% of card height */
+    background-size: cover;
+    background-position: center;
+}
+
+.card-text-container {
+    width: 100%;
+    height: 30%;
+    /* Text area takes 30% */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FDF6EC;
+    /* Consistent Warm Ivory background */
+    text-align: center;
+}
+
+.card-front .item-name {
+    font-family: 'Gabriela', serif;
+    font-size: 1.1rem;
+    color: #582534;
+    /* Burgundy Roast */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.card-front .item-price {
+    font-family: 'Gabriela', serif;
+    font-size: 1rem;
+    color: #8b4833;
+    /* Orange color for price */
+    font-weight: bold;
+}
+
+/* Back Side - White background with orange text */
+.card-back {
+    background-color: #FFFFFF;
+    /* White background */
+    transform: rotateY(180deg);
+    font-family: 'Gabriela', serif;
+    color: #8b4833;
+    /* Orange color for text */
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-back-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-back .item-description {
+    font-size: 0.9rem;
+    color: #8b4833;
+    /* Orange color */
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.card-buttons button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #8b4833;
+    /* Orange background */
+    color: #FFFFFF;
+    /* White text */
+    font-weight: bold;
+    font-family: 'Gabriela', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(139, 72, 51, 0.3);
+}
+
+.card-buttons button:hover {
+    background: #582534;
+    /* Darker orange/burgundy on hover */
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 15px rgba(88, 37, 52, 0.4);
+}
+
+
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    font-family: 'Fleur De Leah', cursive;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #8b4833;
+    /* Orange color to match theme */
+    text-shadow: 1px 1px 2px #C2B280;
+}
+
+/* Contact Page */
+.contact-section {
+    font-family: 'Playfair Display', serif;
+    background: #FDF6EC;
+    /* Warm Ivory */
+    color: #582534;
+    /* Burgundy Roast */
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(253, 246, 236, 0.8);
+    /* Warm Ivory */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.left-column input,
+.left-column textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #FDF6EC;
+    /* Warm Ivory */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.left-column input:focus,
+.left-column textarea:focus {
+    box-shadow: 0 0 0 3px #C9A69B;
+    /* Dusty Rose */
+    outline: none;
+}
+
+.left-column textarea {
+    grid-column: span 2;
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Send Button */
+.left-column button {
+    grid-column: span 2;
+    padding: 15px;
+    background: #582534;
+    /* Burgundy Roast */
+    color: #FDF6EC;
+    /* Warm Ivory */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.left-column button:hover {
+    background: #C9A69B;
+    /* Dusty Rose */
+}
+
+/* Contact Info */
+.contact-details {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.contact-details strong {
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+/* Social Links */
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-media a {
+    color: #C9A69B;
+    /* Dusty Rose */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+/* Animated Character */
+.floating-character {
+    width: 60px;
+    height: 60px;
+    margin: 30px auto 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Cart Page */
+.cart-section {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    min-height: 60vh;
+}
+
+.cart-item {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cart-item h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #582534;
+    /* Burgundy Roast */
+    margin: 0;
+}
+
+.cart-item .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item .quantity-controls button {
+    background-color: #C9A69B;
+    /* Dusty Rose */
+    color: #FDF6EC;
+    /* Warm Ivory */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-item .quantity-controls button:hover {
+    background-color: #582534;
+    /* Burgundy Roast */
+}
+
+.cart-item .price,
+.cart-item .total {
+    font-weight: bold;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.cart-item .remove-btn {
+    background-color: #C9A69B;
+    /* Dusty Rose */
+    color: #FDF6EC;
+    /* Warm Ivory */
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-item .remove-btn:hover {
+    background-color: #582534;
+    /* Burgundy Roast */
+}
+
+.cart-total h4 {
+    font-family: 'Playfair Display', serif;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+#empty-cart-message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+/* Checkout Page */
+.checkout-section {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    min-height: 60vh;
+}
+
+.checkout-form,
+.order-summary {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form h3,
+.order-summary h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.checkout-form .form-control {
+    background: #FDF6EC;
+    /* Warm Ivory */
+    border: 1px solid #C2B280;
+    /* Gold Leaf */
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Gabriela', serif;
+    color: #582534;
+    /* Burgundy Roast */
+    transition: border-color 0.3s ease;
+}
+
+.checkout-form .form-control:focus {
+    border-color: #C9A69B;
+    /* Dusty Rose */
+    box-shadow: 0 0 0 3px rgba(201, 166, 155, 0.2);
+    /* Dusty Rose */
+    outline: none;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.order-item span {
+    font-family: 'Gabriela', serif;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.order-item .item-name {
+    flex: 1;
+}
+
+.order-item .item-price {
+    font-weight: bold;
+}
+
+/* About Page */
+.about-section {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    min-height: 60vh;
+}
+
+.about-content,
+.team-card {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h3,
+.team-card h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.team-card img {
+    transition: transform 0.3s ease;
+}
+
+.team-card img:hover {
+    transform: scale(1.1);
+}
+
+/* Delivery Page */
+.delivery-section {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    min-height: 60vh;
+}
+
+.delivery-content {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+/* Account Page */
+.account-section {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    min-height: 60vh;
+}
+
+.account-content {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.account-content .form-control {
+    background: #FDF6EC;
+    /* Warm Ivory */
+    border: 1px solid #C2B280;
+    /* Gold Leaf */
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Gabriela', serif;
+    color: #582534;
+    /* Burgundy Roast */
+    transition: border-color 0.3s ease;
+}
+
+.account-content .form-control:focus {
+    border-color: #C9A69B;
+    /* Dusty Rose */
+    box-shadow: 0 0 0 3px rgba(201, 166, 155, 0.2);
+    /* Dusty Rose */
+    outline: none;
+}
+
+/* Order History Page */
+.order-history-section {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    min-height: 60vh;
+}
+
+.order-history-item {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-history-item h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.order-history-item .order-details {
+    font-family: 'Gabriela', serif;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.order-history-item .order-items {
+    margin: 10px 0;
+}
+
+.order-history-item .order-total {
+    font-weight: bold;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+/* Returns Page */
+.returns-section {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    min-height: 60vh;
+}
+
+.returns-content {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.returns-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+/* Blog Section - Reduced Gap with Testimonials */
+.blog-section {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    min-height: 60vh;
+    padding: 0 0 2rem;
+    /* Removed top padding to reduce gap */
+}
+
+.blog-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #582534;
+    font-size: 1.3rem !important;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card p.small {
+    font-size: 0.9rem !important;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-item {
+    background-color: #FDF6EC;
+    /* Warm Ivory */
+    border-left: 4px solid #C9A69B;
+    /* Dusty Rose */
+    border-radius: 0 8px 8px 0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(88, 37, 52, 0.15);
+    /* Burgundy Roast */
+}
+
+.blog-item h3 {
+    font-family: 'Playfair Display', serif;
+    color: #582534;
+    /* Burgundy Roast */
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.blog-meta {
+    color: #6E6658;
+    /* Olive Smoke */
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.blog-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.blog-excerpt {
+    color: #6E6658;
+    /* Olive Smoke */
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Blog page dropdown styles */
+.blog-full-content {
+    display: none;
+    padding-top: 1rem;
+}
+
+.blog-full-content.show {
+    display: block;
+}
+
+.blog-read-more {
+    cursor: pointer;
+    color: #C9A69B;
+    /* Dusty Rose */
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.blog-read-more:hover {
+    color: #582534;
+    /* Burgundy Roast */
+}
+
+.blog-read-more .fa-arrow-right {
+    transition: transform 0.3s ease;
+}
+
+.blog-read-more[aria-expanded="true"] .fa-arrow-right {
+    transform: rotate(90deg);
+}
+
+/* Login Page - Improved Styling */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fcf7f0 url('loginpage.jpg') no-repeat center center / cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 0;
+    /* Override body padding */
+}
+
+.login-page .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.login-page .navbar-logo {
+    font-family: 'Fleur De Leah', cursive;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.login-page .navbar-links {
+    list-style: none;
+    display: flex;
+}
+
+.login-page .navbar-links li a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.login-page .navbar-links li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffd700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Glassmorphism Container for Login Page - Centered */
+.login-page .glass-container {
+    position: relative;
+    width: 380px;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    /* Removed margin-top to allow flex centering */
+}
+
+.login-page .glass-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: skewX(-15deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.login-page .glass-container:hover::before {
+    left: 120%;
+}
+
+.login-page .glass-container h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: auto;
+}
+
+/* Input Fields for Login Page */
+.login-page .input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.login-page .input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 35px;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.login-page .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-page .input-group input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.login-page .input-group label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.login-page .input-group input:focus+label,
+.login-page .input-group input:valid+label {
+    top: 0;
+    left: 15px;
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Remember & Forgot for Login Page */
+.login-page .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.login-page .remember-forgot label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login-page .remember-forgot input {
+    margin-right: 8px;
+    accent-color: #fff;
+}
+
+.login-page .remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.login-page .remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Login Button for Login Page */
+.login-page .login-btn {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 35px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-page .login-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Register Link for Login Page */
+.login-page .register-link {
+    text-align: center;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.login-page .register-link a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.login-page .register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Logout Message */
+.logout-message {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    body {
+        padding-top: calc(var(--header-height) + var(--navbar-height));
+    }
+
+    .login-page {
+        padding-top: 0;
+    }
+
+    .navbar,
+    .navbar.navbar-light,
+    .navbar.bg-beige {
+        top: var(--header-height) !important;
+        height: auto;
+        padding: 10px 16px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .login-page .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .login-page .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .card {
+        width: 90%;
+        height: 320px;
+    }
+
+    .card-front,
+    .card-back {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .logo-title {
+        font-size: 2.5rem;
+    }
+
+    .logo-sub {
+        font-size: 1.2rem;
+    }
+
+    .about-section,
+    .delivery-section,
+    .account-section,
+    .order-history-section,
+    .returns-section,
+    .blog-section {
+        padding: 2rem 1rem;
+    }
+
+    .about-content,
+    .delivery-content,
+    .account-content,
+    .order-history-item,
+    .returns-content,
+    .team-card,
+    .blog-item {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .about-content h3,
+    .delivery-content h3,
+    .account-content h3,
+    .order-history-item h5,
+    .returns-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .blog-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .blog-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Mobile carousel adjustments */
+    .hero .carousel-item {
+        height: 450px;
+    }
+
+    .carousel-caption {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: calc(var(--header-height) + var(--navbar-height));
+    }
+
+    .login-page {
+        padding-top: 0;
+    }
+
+    .card {
+        width: 90%;
+        height: 300px;
+    }
+
+    .team-card {
+        margin-bottom: 1rem;
+    }
+
+    .top-icons {
+        gap: 15px;
+    }
+
+    .navbar {
+        padding: 10px 12px;
+        top: var(--header-height) !important;
+    }
+
+    /* Small mobile carousel adjustments */
+    .hero .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* General Typographic Styles */
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 30px;
+}
+
+@media (min-width: 1200px) {
+
+    .h1,
+    h1 {
+        font-size: 2.5rem;
+        padding-left: 25px;
+    }
+
+    .h3,
+    h3 {
+        font-size: 1.75rem;
+        padding-left: 20px;
+    }
+
+    .h4,
+    h4 {
+        font-size: 1.5rem;
+        padding-left: 20px;
+    }
+}
