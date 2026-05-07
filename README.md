@@ -18,7 +18,6 @@ A full-stack web application for a modern cafe, featuring a responsive user inte
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Python, Django
-- **Database:** SQLite (or your specific database)
 
 ## ✨ Key Features
 
